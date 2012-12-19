@@ -23,4 +23,8 @@ public class Product {
 	@SuppressWarnings("unused")
 	@Column(table = "products_additional_data")
 	private String category;
+	
+	@SuppressWarnings("unused")
+	@Column(table = "products_additional_data")
+	private int displaySequence;
 }

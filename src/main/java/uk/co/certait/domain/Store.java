@@ -1,14 +1,13 @@
 package uk.co.certait.domain;
 
-import java.util.Map;
+import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.MapKey;
+import javax.persistence.OneToMany;
+import javax.persistence.OrderBy;
 import javax.persistence.Table;
 
 @Entity
@@ -21,12 +20,10 @@ public class Store {
 	@SuppressWarnings("unused")
 	private String name;
 
-	@ManyToMany(fetch = FetchType.EAGER)
-	@JoinTable(name = "stores_products", joinColumns = @JoinColumn(name = "store_id"), inverseJoinColumns = @JoinColumn(name = "product_id"))
-	@MapKey(name = "category")
-	private Map<String, Product> products;
+	@SuppressWarnings("unused")
+	@OneToMany(fetch = FetchType.EAGER)
+	@JoinColumn(name ="store_id")
+	@OrderBy(value = "displaySequence")
+	private Set<Product> products;
 
-	public Map<String, Product> getProducts() {
-		return products;
-	}
 }
