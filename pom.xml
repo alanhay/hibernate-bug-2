@@ -7,6 +7,9 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<dependencies>
+	
+		<!-- Also issue in 3 -->
+		<!-- 
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
@@ -16,13 +19,20 @@
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>3.6.9.Final</version>
-		</dependency>
+		</dependency> -->
 
 		<!-- Also issue in 4 -->
 		<!-- <dependency> <groupId>org.hibernate</groupId> <artifactId>hibernate-core</artifactId> 
 			<version>4.1.0.Final</version> </dependency> <dependency> <groupId>org.hibernate</groupId> 
 			<artifactId>hibernate-entitymanager</artifactId> <version>4.1.0.Final</version> 
 			</dependency> -->
+			
+		<dependency>
+		  <groupId>org.hibernate</groupId>
+		  <artifactId>hibernate-entitymanager</artifactId>
+		  <version>5.0.3.Final</version>
+		</dependency>
+		
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
